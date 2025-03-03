@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Tech Gadgets - Product Page</title>
+   <!-- FontAwesome for Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+   <style>
+       /* CSS Variables for Consistent Styling */
+       :root {
+           --primary-color: #007bff;
+           --secondary-color: #6c757d;
+           --text-color: #333;
+           --background-color: #f8f9fa;
+           --button-padding: 10px 20px;
+       }
+       body {
+           font-family: Arial, sans-serif;
+           color: var(--text-color);
+           background-color: var(--background-color);
+           margin: 0;
+           padding: 0;
+       }
+       header {
+           background-color: white;
+           padding: 1rem;
+           text-align: center;
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+           display: flex;
+           align-items: center;
+           justify-content: center;
+       }
+       .logo {
+           width: 50px; /* Adjust the size of the logo */
+           height: auto;
+           margin-right: 10px;
+       }
+       nav a {
+           margin: 0 1rem;
+           color: var(--primary-color);
+           text-decoration: none;
+       }
+       main {
+           display: flex;
+           padding: 20px;
+           gap: 20px;
+       }
+       article {
+           flex: 2;
+       }
+       aside {
+           flex: 1;
+           background-color: #fff;
+           padding: 15px;
+           border-radius: 5px;
+       }
+       .product-image {
+           width: 50%;
+           border-radius: 5px;
+           margin-bottom: 1rem;
+       }
+       .product-price {
+           font-size: 1.5rem;
+           color: var(--primary-color);
+           margin-bottom: 1rem;
+       }
+       .add-to-cart {
+           background-color: var(--primary-color);
+           color: white;
+           padding: var(--button-padding);
+           border: none;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       .add-to-cart:hover {
+           background-color: #0056b3; /* Darker shade of primary color */
+       }
+       footer {
+           text-align: center;
+           padding: 1rem;
+           background-color: #fff;
+           box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+       }
+       /* Responsive Design */
+       @media (max-width: 768px) {
+           main {
+               flex-direction: column;
+           }
+           aside {
+               order: -1; /* Moves aside above the article on mobile */
+           }
+           header {
+               flex-direction: column;
+           }
+           .logo {
+               margin-bottom: 10px;
+           }
+       }
+       /* Icon Styling */
+       .icon {
+           font-size: 24px;
+           color: var(--primary-color);
+           margin-right: 10px;
+       }
+   </style>
+</head>
+<body>
+   <header>
+       <!-- Logo Image -->
+       <img src="https://logomakr.com/download.php?id=1Z1Z1Z" alt="Tech Gadgets Logo" class="logo">
+       <h1>Tech Gadgets</h1>
+       <nav>
+           <a href="#"><i class="fas fa-home icon"></i>Home</a>
+           <a href="#"><i class="fas fa-box icon"></i>Products</a>
+           <a href="#"><i class="fas fa-info-circle icon"></i>About</a>
+           <a href="#"><i class="fas fa-envelope icon"></i>Contact</a>
+       </nav>
+   </header>
+   <main>
+       <article>
+           <!-- Online Image from Unsplash -->
+           <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="High-Quality Wireless Headphones" class="product-image">
+           <h1>Wireless Headphones</h1>
+           <p>Experience superior sound quality with these comfortable and noise-canceling wireless headphones. Perfect for music lovers and professionals.</p>
+           <p class="product-price">$199.99</p>
+           <button class="add-to-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+       </article>
+       <aside>
+           <h3>Related Products</h3>
+           <ul>
+               <li><a href="#"><i class="fas fa-clock icon"></i>Smartwatch</a></li>
+               <li><a href="#"><i class="fas fa-volume-up icon"></i>Bluetooth Speaker</a></li>
+               <li><a href="#"><i class="fas fa-mobile-alt icon"></i>Phone Case</a></li>
+           </ul>
+       </aside>
+   </main>
+   <footer>
+       &copy; 2024 Tech Gadgets. All rights reserved.
+   </footer>
+   <script>
+       const productName = "Wireless Headphones";
+       const productPrice = 199.99;
+       // Add to Cart functionality
+       const addToCartButton = document.querySelector('.add-to-cart');
+       addToCartButton.addEventListener('click', function() {
+           alert(`${productName} has been added to the cart!`);
+       });
+       // Log product information to the console
+       console.log("Product Name: " + productName);
+       console.log("Product Price: $" + productPrice);
+   </script>
+</body>
+</html>
